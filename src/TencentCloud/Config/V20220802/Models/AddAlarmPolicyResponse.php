@@ -18,19 +18,22 @@ namespace TencentCloud\Config\V20220802\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AddConfigRule返回参数结构体
+ * AddAlarmPolicy返回参数结构体
  *
- * @method string getRuleId() 获取<p>规则ID</p>
- * @method void setRuleId(string $RuleId) 设置<p>规则ID</p>
+ * @method integer getAlarmPolicyId() 获取告警策略唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmPolicyId(integer $AlarmPolicyId) 设置告警策略唯一id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class AddConfigRuleResponse extends AbstractModel
+class AddAlarmPolicyResponse extends AbstractModel
 {
     /**
-     * @var string <p>规则ID</p>
+     * @var integer 告警策略唯一id
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RuleId;
+    public $AlarmPolicyId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +41,8 @@ class AddConfigRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $RuleId <p>规则ID</p>
+     * @param integer $AlarmPolicyId 告警策略唯一id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +58,8 @@ class AddConfigRuleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists("AlarmPolicyId",$param) and $param["AlarmPolicyId"] !== null) {
+            $this->AlarmPolicyId = $param["AlarmPolicyId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
